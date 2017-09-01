@@ -2,6 +2,8 @@ package com.csi_bkbiet;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -20,13 +22,26 @@ public class Home extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    Frag_home frag_home = new Frag_home();
+                    FragmentTransaction transaction_home = getSupportFragmentManager().beginTransaction();
+                    transaction_home.replace(R.id.content, frag_home);
+                    transaction_home.addToBackStack(null);
+                    transaction_home.commit();
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+
+                    Frag_dashboard newFragment = new Frag_dashboard();
+                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.content, newFragment);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                    Frag_notification frag_notification = new Frag_notification();
+                    FragmentTransaction transaction_not = getSupportFragmentManager().beginTransaction();
+                    transaction_not.replace(R.id.content, frag_notification);
+                    transaction_not.addToBackStack(null);
+                    transaction_not.commit();
                     return true;
             }
             return false;
@@ -46,9 +61,14 @@ public class Home extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 
-        mTextMessage = (TextView) findViewById(R.id.message);
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        Frag_home frag_home = new Frag_home();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.content,frag_home,"Hello").commit();
     }
 
 
