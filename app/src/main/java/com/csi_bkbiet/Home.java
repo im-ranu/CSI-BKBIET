@@ -28,20 +28,36 @@ public class Home extends AppCompatActivity {
                     transaction_home.addToBackStack(null);
                     transaction_home.commit();
                     return true;
-                case R.id.navigation_dashboard:
+                case R.id.navigation_notice:
 
-                    Frag_dashboard newFragment = new Frag_dashboard();
+                    Frag_notice newFragment = new Frag_notice();
                     FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                     transaction.replace(R.id.content, newFragment);
                     transaction.addToBackStack(null);
                     transaction.commit();
                     return true;
-                case R.id.navigation_notifications:
-                    Frag_notification frag_notification = new Frag_notification();
+                case R.id.navigation_events:
+                    Frag_events frag_notification = new Frag_events();
                     FragmentTransaction transaction_not = getSupportFragmentManager().beginTransaction();
                     transaction_not.replace(R.id.content, frag_notification);
                     transaction_not.addToBackStack(null);
                     transaction_not.commit();
+                    return true;
+
+                case R.id.navigation_scanner:
+                    Frag_scanner frag_scanner = new Frag_scanner();
+                    FragmentTransaction transaction_scan = getSupportFragmentManager().beginTransaction();
+                    transaction_scan.replace(R.id.content, frag_scanner);
+                    transaction_scan.addToBackStack(null);
+                    transaction_scan.commit();
+                    return true;
+
+                case R.id.navigation_feedback:
+                    Frag_feedback frag_feedback = new Frag_feedback();
+                    FragmentTransaction transaction_feed = getSupportFragmentManager().beginTransaction();
+                    transaction_feed.replace(R.id.content, frag_feedback);
+                    transaction_feed.addToBackStack(null);
+                    transaction_feed.commit();
                     return true;
             }
             return false;
