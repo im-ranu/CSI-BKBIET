@@ -1,34 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <RelativeLayout
+
+
+
+            <ImageView
+                android:id="@+id/frag_home_img1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:elevation="7dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/image_sample" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/home_recycler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frag_home_img1"
+        android:layout_marginTop="15dp" />
 
-        <ImageView
-            android:id="@+id/frag_home_img1"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:adjustViewBounds="true"
-            android:elevation="7dp"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/image_sample" />
-
-        <ProgressBar
-            android:id="@+id/progressBar2"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="58dp" />
-
-
-    </RelativeLayout>
 
 
 </LinearLayout>

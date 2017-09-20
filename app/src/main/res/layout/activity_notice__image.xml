@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.csibkbiet.Notice_Image">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/n_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="7dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Notice"
+        app:titleTextColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/image_sample"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/sample"
+        app:srcCompat="@drawable/image_sample" />
+</LinearLayout>

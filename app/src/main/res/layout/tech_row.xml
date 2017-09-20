@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_img"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/notice_image"
+            android:layout_width="111dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/linkedin_icon"
+            app:srcCompat="@drawable/linkedin_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/tech_title"
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/actor"
+                android:text="Heading 1"
+                android:textAlignment="viewStart"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tech_design"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/actor"
+                android:text="Heading 1"
+                android:textAlignment="textStart"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tech_branch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="TextView" />
+
+
+            <TextView
+                android:id="@+id/tech_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/actor"
+                android:text="Heading 1"
+                android:textAlignment="textStart"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
